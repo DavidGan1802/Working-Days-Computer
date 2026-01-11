@@ -21,7 +21,7 @@ def compute_weekdays(start_month, start_day, start_year, end_month, end_day, end
     end = datetime.date(end_year, end_month, end_day)  
     total = end - start
     total_days = total.days + 1
-    full_weeks = total_days//7
+    full_weeks = total_days // 7
     weekdays = full_weeks * 5
     
     #datetime.timedelta represents a duration of time. It can be days, hours, minutes etc.

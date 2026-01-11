@@ -11,8 +11,6 @@ test_cases = [
 ]
 
 for i, (inputs, expected) in enumerate(test_cases):
-    start_month, start_day, start_year, end_month, end_day, end_year = inputs
-    expected_total, expected_leap, expected_weekends, expected_weekdays = expected
 
     # Compute outputs using your functions
     total_days = compute_total_days(*inputs)
@@ -27,9 +25,9 @@ for i, (inputs, expected) in enumerate(test_cases):
     print(f"\ntotal weekends: {weekends}") 
     print(f"\ntotal days without weekends: {weekdays}")
 
-    # Optional: check if outputs match expected
+    #Check if outputs match expected
     if (total_days, leap_days, weekends, weekdays) == expected:
         print("Result: ✅ PASS")
     else:
         print("Result: ❌ FAIL")
-    print("-" * 40)
+    print("-" * 100)

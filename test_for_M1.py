@@ -18,7 +18,7 @@ for i, (inputs, expected) in enumerate(test_cases):
     weekends = total_days - weekdays
     leap_days = compute_leap_days(*inputs)
 
-    # Print in the same format as your original program
+    # Print in the same format as the original program
     print ("Enter start month: Enter start day: Enter start year: Enter end month: Enter end day: Enter end year:")    
     print(f"total days from start date to end date: {total_days}")
     print(f"\ntotal additional days from leap years: {leap_days}")

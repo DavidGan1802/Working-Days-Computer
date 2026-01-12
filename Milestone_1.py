@@ -48,25 +48,21 @@ def compute_leap_days(start_month, start_day, start_year, end_month, end_day, en
     return leap_days
     
 if __name__ == '__main__':
-    start_month = int(input().strip())
 
-    start_day = int(input().strip())
+    start_month = int(input("Enter start month: ").strip())
+    start_day   = int(input("Enter start day1: ").strip())
+    start_year  = int(input("Enter start year: ").strip())
 
-    start_year = int(input().strip())
-    
-    end_month = int(input().strip())
-
-    end_day = int(input().strip())
-
-    end_year = int(input().strip())
+    end_month   = int(input("Enter end month: ").strip())
+    end_day     = int(input("Enter end day: ").strip())
+    end_year    = int(input("Enter end year: ").strip())
 
     total_days = compute_total_days(start_month, start_day, start_year, end_month, end_day, end_year)
     weekdays = compute_weekdays(start_month, start_day, start_year, end_month, end_day, end_year)
     weekends = total_days - weekdays
     leap_days = compute_leap_days(start_month, start_day, start_year, end_month, end_day, end_year)
-    
-    print ("Enter start month: Enter start day: Enter start year: Enter end month: Enter end day: Enter end year:")    
-    print(f"total days from start date to end date: {total_days}")
+       
+    print(f"\ntotal days from start date to end date: {total_days}")
     print(f"\ntotal additional days from leap years: {leap_days}")
     print(f"\ntotal weekends: {weekends}") 
     print(f"\ntotal days without weekends: {weekdays}")

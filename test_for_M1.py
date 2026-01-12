@@ -17,17 +17,20 @@ for i, (inputs, expected) in enumerate(test_cases):
     weekdays = compute_weekdays(*inputs)
     weekends = total_days - weekdays
     leap_days = compute_leap_days(*inputs)
-
-    # Print in the same format as the original program
-    print ("Enter start month: Enter start day: Enter start year: Enter end month: Enter end day: Enter end year:")    
+   
+    print(f"Test Case {i}")
     print(f"total days from start date to end date: {total_days}")
-    print(f"\ntotal additional days from leap years: {leap_days}")
-    print(f"\ntotal weekends: {weekends}") 
-    print(f"\ntotal days without weekends: {weekdays}")
+    print(f"Correct Answer : {expected[0]}")
+    print(f"total additional days from leap years: {leap_days}")
+    print(f"Correct Answer : {expected[1]}")
+    print(f"total weekends: {weekends}") 
+    print(f"Correct Answer : {expected[2]}")
+    print(f"total days without weekends: {weekdays}")
+    print(f"Correct Answer : {expected[3]}")
 
     #Check if outputs match expected
     if (total_days, leap_days, weekends, weekdays) == expected:
         print("Result: ✅ PASS")
     else:
         print("Result: ❌ FAIL")
-    print("-" * 100)
+    print("-" * 50)

@@ -2,6 +2,7 @@ import calendar
 import datetime
 import sys
 
+#Software Project 1 for EEE 111, UP Diliman
 #References : https://docs.python.org/2/library/datetime.html
 #References : https://docs.python.org/2/library/calendar.html
 #References : https://docs.python.org/3/tutorial/errors.html

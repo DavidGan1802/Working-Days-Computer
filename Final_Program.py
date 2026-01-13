@@ -7,7 +7,18 @@ import sys
 #References : https://docs.python.org/3/tutorial/errors.html
 #References : https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/
 
-def error_checker(month, day, year):
+def get_int_input(user_input):
+    
+    try:
+        return int(input(user_input).strip())
+    except ValueError:
+        return None
+
+def error_checker_date(month, day, year):
+    
+    if not isinstance(month, int) or not isinstance(day, int) or not isinstance(year, int):
+        print("\nInvalid Input. Exiting Program.")
+        sys.exit() 
     
     if not (1 <= month <= 12):
         print("\nInvalid Input. Exiting Program.")
@@ -103,16 +114,16 @@ def compute_holidays(start_month, start_day, start_year, end_month, end_day, end
 
 if __name__ == '__main__':
 
-    start_month = int(input("Enter start month: ").strip())
-    start_day   = int(input("Enter start day: ").strip())
-    start_year  = int(input("Enter start year: ").strip())
+    start_month = get_int_input("Enter start month: ")
+    start_day   = get_int_input("Enter start day: ")
+    start_year  = get_int_input("Enter start year: ")
 
-    end_month   = int(input("Enter end month: ").strip())
-    end_day     = int(input("Enter end day: ").strip())
-    end_year    = int(input("Enter end year: ").strip())
-    
-    error_checker(start_month, start_day, start_year)
-    error_checker(end_month, end_day, end_year)
+    end_month   = get_int_input("Enter end month: ")
+    end_day     = get_int_input("Enter end day: ")
+    end_year    = get_int_input("Enter end year: ")
+     
+    error_checker_date(start_month, start_day, start_year)
+    error_checker_date(end_month, end_day, end_year)
 
     total_days = compute_total_days(start_month, start_day, start_year, end_month, end_day, end_year)
     weekdays = compute_weekdays(start_month, start_day, start_year, end_month, end_day, end_year)

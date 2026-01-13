@@ -34,6 +34,7 @@ def error_checker_date(month, day, year):
         print("\nInvalid Input. Exiting Program.")
         sys.exit()
     
+    #the program will only take years inclusive from 1971 to 2020
     if not (1971 <= year <= 2020):
         print("\nInvalid Input. Exiting Program.")
         sys.exit()
@@ -97,6 +98,7 @@ def compute_holidays(start_month, start_day, start_year, end_month, end_day, end
     for i in range(total_days):
         current = start + datetime.timedelta(days=i)
 
+        #the holiday will only be counted if it doesn't land on a weekend
         if current.weekday() < 5:
             if current.month == 1 and current.day == 1:
                 new_year += 1

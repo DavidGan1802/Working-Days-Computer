@@ -2,8 +2,8 @@ import calendar
 import datetime
 
 
-#References : https://docs.python.org/2/library/datetime.html
-#References : https://docs.python.org/2/library/calendar.html
+#References: https://docs.python.org/2/library/datetime.html
+#References: https://docs.python.org/2/library/calendar.html
 
 def compute_total_days(start_month, start_day, start_year, end_month, end_day, end_year):
     

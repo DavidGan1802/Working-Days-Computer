@@ -35,4 +35,5 @@ Error Checking:
 3) All inputs should be an integer.
 
 Credits: UPD EEE 111 Professors
+
 References: http://hungary.workingdays.org/

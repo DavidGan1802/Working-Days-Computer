@@ -15,12 +15,12 @@ The code includes the following functions:
 - compute_workdays(): Computes the total number of workdays, defined as weekdays disregarding both the weekends and holidays landing on a weekday.
 
 Inputs:
-a) Day of start date (integer)
-b) Month of start date (integer)
-c) Year of start date (integer)
-d) Day of end date - inclusive (integer)
-e) Month of end date (integer)
-f) Year of end date (integer)
+- Day of start date (integer)
+- Month of start date (integer)
+- Year of start date (integer)
+- Day of end date - inclusive (integer)
+- Month of end date (integer)
+- Year of end date (integer)
 
 Outputs:
 1) Number of days between the start day to end day, inclusive of the end date. (integer)
@@ -30,9 +30,9 @@ Outputs:
 5) Number of working days between the start date and end date, inclusive of the end date. (integer)
 
 Error Checking:
-a) The input dates should be within the date limit (January 1, 1971 to December 31, 2020).
-b) The input dates should be valid (January has 31 days, December has 31 days, etc.).
-c) All inputs should be an integer.
+1) The input dates should be within the date limit (January 1, 1971 to December 31, 2020).
+2) The input dates should be valid (January has 31 days, December has 31 days, etc.).
+3) All inputs should be an integer.
 
 Credits: UPD EEE 111 Professors
 References: http://hungary.workingdays.org/

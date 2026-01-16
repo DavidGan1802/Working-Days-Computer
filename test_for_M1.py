@@ -38,16 +38,33 @@ for i, (inputs, expected) in enumerate(test_cases):
         weekdays
     )
 
-    print(f"Test Case {i}")
-    print(f"Inputs: {inputs}")
-    print(f"total days from start date to end date: {result[0]}")
-    print(f"Correct Answer : {expected[0]}")
-    print(f"total additional days from leap years: {result[1]}")
-    print(f"Correct Answer : {expected[1]}")
-    print(f"total weekends: {result[2]}") 
-    print(f"Correct Answer : {expected[2]}")
-    print(f"total days without weekends: {result[3]}")
-    print(f"Correct Answer : {expected[3]}")
+    
+    labels = [
+        "total days from start date to end date",
+        "total additional days from leap years",
+        "total weekends",
+        "total days without weekends"
+    ]
+    
+    # Table header
+    print(f"{'Metric':40} {'Output':8} {'Expected':10} Status")
+    print("-" * 70)
+
+    all_passed = True
+
+    for i in range(len(labels)):
+        output = result[i]
+        expected_val = expected[i]
+        if output == expected_val:
+            status = "✓"
+        else:
+            status = "✗"
+            all_passed = False
+
+        print(f"{labels[i]:40} {output:<8} {expected_val:<10} {status}")
+
+    # Final result
+    print("-" * 70)
 
     #Check if outputs match expected
     if (result) == expected:

@@ -49,27 +49,39 @@ for i, (inputs, expected) in enumerate(test_cases):
             total_holidays,
             workdays
         )
+        labels = [
+            "total days from start date to end date",
+            "total additional days from leap years",
+            "total weekends",
+            "total days without weekends",
+            "new year holiday",
+            "labor day holiday",
+            "all saints day holiday",
+            "christmas holiday",
+            "total holidays",
+            "total working days"
+        ]
 
-        print(f"total days from start date to end date: {result[0]}")
-        print(f"Correct Answer : {expected[0]}")
-        print(f"total additional days from leap years: {result[1]}")
-        print(f"Correct Answer : {expected[1]}")
-        print(f"total weekends: {result[2]}") 
-        print(f"Correct Answer : {expected[2]}")
-        print(f"total days without weekends: {result[3]}")
-        print(f"Correct Answer : {expected[3]}")
-        print(f"new year holiday: {result[4]}")
-        print(f"Correct Answer : {expected[4]}")
-        print(f"labor day holiday: {result[5]}")
-        print(f"Correct Answer : {expected[5]}")
-        print(f"all saints day holiday: {result[6]}")
-        print(f"Correct Answer : {expected[6]}")
-        print(f"christmas holiday: {result[7]}")
-        print(f"Correct Answer : {expected[7]}")        
-        print(f"total holidays: {result[8]}")
-        print(f"Correct Answer : {expected[8]}")
-        print(f"total working days: {result[9]}")
-        print(f"Correct Answer : {expected[9]}")
+        # Table header
+        print(f"{'Metric':40} {'Output':8} {'Expected':10} Status")
+        print("-" * 70)
+
+        # Compare results
+        all_passed = True
+
+        for i in range(len(labels)):
+            output = result[i]
+            expected_val = expected[i]
+            if output == expected_val:
+                status = "✓"
+            else:
+                status = "✗"
+                all_passed = False
+
+            print(f"{labels[i]:40} {output:<8} {expected_val:<10} {status}")
+
+        # Final result
+        print("-" * 70)
         
         if result == expected:
             print("Result: ✅ PASS")
@@ -84,6 +96,6 @@ for i, (inputs, expected) in enumerate(test_cases):
         else:
             print("Result: ❌ FAIL")
 
-    print("-" * 50)
+    print("-" * 70)
     
     

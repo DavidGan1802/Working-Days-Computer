@@ -133,7 +133,8 @@ if __name__ == '__main__':
     weekends = total_days - weekdays
     leap_days = compute_leap_days(start_month, start_day, start_year, end_month, end_day, end_year)
     holidays = compute_holidays(start_month, start_day, start_year, end_month, end_day, end_year)
-    workdays = total_days - weekends - holidays[4]
+    total_holidays = holidays[4]
+    workdays = total_days - weekends - total_holidays
        
     print(f"\ntotal days from start date to end date: {total_days}")
     print(f"\ntotal additional days from leap years: {leap_days}")

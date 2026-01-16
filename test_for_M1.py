@@ -1,4 +1,7 @@
-from Milestone_1 import compute_total_days, compute_weekdays, compute_leap_days
+from Milestone_1 import (
+    compute_total_days, 
+    compute_weekdays, 
+    compute_leap_days)
 
 # Test cases: each tuple is (inputs, expected_outputs)
 # inputs: (start_month, start_day, start_year, end_month, end_day, end_year)
@@ -28,18 +31,26 @@ for i, (inputs, expected) in enumerate(test_cases):
     weekends = total_days - weekdays
     leap_days = compute_leap_days(*inputs)
    
+    result = (
+        total_days,
+        leap_days,
+        weekends,
+        weekdays
+    )
+
     print(f"Test Case {i}")
-    print(f"total days from start date to end date: {total_days}")
+    print(f"Inputs: {inputs}")
+    print(f"total days from start date to end date: {result[0]}")
     print(f"Correct Answer : {expected[0]}")
-    print(f"total additional days from leap years: {leap_days}")
+    print(f"total additional days from leap years: {result[1]}")
     print(f"Correct Answer : {expected[1]}")
-    print(f"total weekends: {weekends}") 
+    print(f"total weekends: {result[2]}") 
     print(f"Correct Answer : {expected[2]}")
-    print(f"total days without weekends: {weekdays}")
+    print(f"total days without weekends: {result[3]}")
     print(f"Correct Answer : {expected[3]}")
 
     #Check if outputs match expected
-    if (total_days, leap_days, weekends, weekdays) == expected:
+    if (result) == expected:
         print("Result: ✅ PASS")
     else:
         print("Result: ❌ FAIL")

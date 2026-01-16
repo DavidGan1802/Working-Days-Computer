@@ -22,7 +22,7 @@ def compute_weekdays(start_month, start_day, start_year, end_month, end_day, end
     total = end - start
     total_days = total.days + 1
     full_weeks = total_days // 7
-    weekdays = full_weeks * 5
+    weekdays = full_weeks * 5 
     
     #datetime.timedelta represents a duration of time. It can be days, hours, minutes etc.
     #the .weekday() function generates a int 0-6 wherein 0 represents Monday, 1 represents Tuesday and so on

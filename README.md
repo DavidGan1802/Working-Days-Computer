@@ -1,4 +1,4 @@
-My software project for EEE 111 (UP Diliman Electrical and Electronics Engineering)
+My software project for EEE 111 (Introduction to Programming Computation)
 
 This software project computes the number of working days for a given time frame using the Gregorian calendar.
 The project is heavily inspired by the website: http://hungary.workingdays.org/

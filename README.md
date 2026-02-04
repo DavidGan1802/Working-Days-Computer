@@ -34,6 +34,6 @@ disregarding both holidays landing on a weekday and weekends (Saturday and Sunda
 2) The input dates should be valid (January has 31 days, December has 31 days, etc.).
 3) All inputs should be an integer.
 
-Credits: UPD EEE 111 Professors
+*Credits: UPD EEE 111 AY 2020-2021 Professors*
 
 References: http://hungary.workingdays.org/
